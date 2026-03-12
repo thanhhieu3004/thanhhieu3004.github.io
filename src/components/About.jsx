@@ -48,7 +48,7 @@ export default function About() {
               <span className="material-icons btn__icon">mail</span>
               Let's Talk
             </a>
-            <a href="#" className="btn btn--outline">
+            <a href="/CV.pdf" download className="btn btn--outline">
               <span className="material-icons btn__icon">download</span>
               Download CV
             </a>
