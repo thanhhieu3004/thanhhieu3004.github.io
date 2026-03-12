@@ -9,11 +9,11 @@
 }
 
 .navbar--scrolled {
-  background: rgba(10, 10, 15, 0.85);
+  background: rgba(248, 249, 255, 0.92);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   padding: 0.8rem 2rem;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 20px rgba(91, 82, 232, 0.08);
 }
 
 .navbar__inner {

@@ -1,5 +1,5 @@
 export const personalInfo = {
-  name: "Thanh Hiếu",
+  name: "Nguyễn Thanh Hiệu",
   title: "Full-Stack Developer",
   subtitle: "Crafting modern web experiences with React, Node.js & Cloud.",
   description:

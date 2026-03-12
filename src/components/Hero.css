@@ -14,7 +14,7 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle, rgba(108,99,255,0.12) 1px, transparent 1px);
+    radial-gradient(circle, rgba(91,82,232,0.18) 1px, transparent 1px);
   background-size: 36px 36px;
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
 }
@@ -23,13 +23,13 @@
 .hero__orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(90px);
   pointer-events: none;
 }
 .hero__orb--1 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(108,99,255,0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(91,82,232,0.22) 0%, transparent 70%);
   top: -100px;
   left: -100px;
   animation: floatOrb1 10s ease-in-out infinite alternate;
@@ -37,7 +37,7 @@
 .hero__orb--2 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(255,101,132,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,101,132,0.18) 0%, transparent 70%);
   bottom: -80px;
   right: -80px;
   animation: floatOrb2 12s ease-in-out infinite alternate;
@@ -254,7 +254,7 @@
   align-items: center;
   gap: 10px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 32px rgba(91, 82, 232, 0.15);
 }
 
 .hero__avatar-badge-icon {

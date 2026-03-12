@@ -15,12 +15,13 @@
   gap: 0.8rem;
   cursor: default;
   transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 16px rgba(91, 82, 232, 0.07);
 }
 
 .project__card:hover {
   border-color: var(--accent);
   background: var(--bg-card-hover);
-  box-shadow: 0 16px 48px rgba(108, 99, 255, 0.12);
+  box-shadow: 0 16px 48px rgba(91, 82, 232, 0.15);
 }
 
 .project__card-top {

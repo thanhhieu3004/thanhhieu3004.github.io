@@ -83,13 +83,14 @@
   padding: 1.5rem;
   text-align: center;
   transition: all 0.3s;
+  box-shadow: 0 2px 12px rgba(91, 82, 232, 0.06);
 }
 
 .about__stat-card:hover {
   border-color: var(--accent);
   background: var(--bg-card-hover);
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(91, 82, 232, 0.15);
 }
 
 .about__stat-value {
@@ -118,6 +119,7 @@
   gap: 1rem;
   margin-bottom: 1rem;
   transition: all 0.3s;
+  box-shadow: 0 2px 12px rgba(91, 82, 232, 0.06);
 }
 
 .about__card:hover {
