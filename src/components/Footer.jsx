@@ -10,33 +10,34 @@ export default function Footer() {
           <a href="#hero" className="footer__logo">
             <span className="footer__logo-bracket">{'<'}</span>TH<span className="footer__logo-bracket">{'/>'}</span>
           </a>
-          <p className="footer__tagline">Building the web, one component at a time.</p>
+          <p className="footer__tagline">Java Backend Developer · Saigon University</p>
         </div>
 
         <div className="footer__links">
           <a href="#about">About</a>
-          <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#cv">CV / Resume</a>
           <a href="#contact">Contact</a>
         </div>
 
         <div className="footer__socials">
-          <a href={personalInfo.github} target="_blank" rel="noreferrer" className="footer__social">
+          <a href={personalInfo.github} target="_blank" rel="noreferrer" className="footer__social" title="GitHub">
             <span className="material-icons">code</span>
           </a>
-          <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="footer__social">
-            <span className="material-icons">link</span>
-          </a>
-          <a href={`mailto:${personalInfo.email}`} className="footer__social">
+          <a href={`mailto:${personalInfo.email}`} className="footer__social" title="Email">
             <span className="material-icons">mail</span>
+          </a>
+          <a href={`tel:${personalInfo.phoneRaw}`} className="footer__social" title="Phone">
+            <span className="material-icons">call</span>
           </a>
         </div>
       </div>
 
       <div className="footer__bottom">
-        <span>© {new Date().getFullYear()} {personalInfo.name}. All rights reserved.</span>
-        <span>Made with <span className="footer__heart">♥</span> using React</span>
+        <span>© {new Date().getFullYear()} {personalInfo.fullName}. All rights reserved.</span>
+        <span>Saigon University · Software Engineering</span>
       </div>
     </footer>
   );

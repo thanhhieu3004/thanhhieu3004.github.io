@@ -11,8 +11,8 @@ function SkillCard({ skill, delay, inView }) {
       className="skill__card"
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ delay, duration: 0.5 }}
-      whileHover={{ y: -6, boxShadow: '0 12px 40px rgba(108,99,255,0.2)' }}
+      transition={{ delay, duration: 0.4 }}
+      whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(91,82,232,0.18)' }}
     >
       <div className="skill__card-icon-wrap">
         <span className="material-icons skill__card-icon">{skill.icon}</span>
@@ -24,22 +24,22 @@ function SkillCard({ skill, delay, inView }) {
 }
 
 export default function Skills() {
-  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [ref, inView] = useInView({ threshold: 0.05, triggerOnce: true });
 
   return (
     <SectionWrapper
       id="skills"
-      title="Technical Arsenal"
-      subtitle="Tools & technologies I use to build production-grade applications."
+      title="Technical Skills"
+      subtitle="Core foundational language in Java (17+), modern Spring ecosystem, and distributed systems tooling."
     >
       <div ref={ref}>
         {skillCategories.map((cat, ci) => (
           <motion.div
             key={cat.title}
             className="skill__category"
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ delay: ci * 0.15 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: ci * 0.1, duration: 0.5 }}
           >
             <div className="skill__category-title">
               <span className="skill__category-title-line" />
@@ -50,7 +50,7 @@ export default function Skills() {
                 <SkillCard
                   key={skill.name}
                   skill={skill}
-                  delay={ci * 0.1 + si * 0.07}
+                  delay={ci * 0.08 + si * 0.04}
                   inView={inView}
                 />
               ))}

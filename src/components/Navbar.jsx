@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { navLinks } from '../data/portfolio';
 import './Navbar.css';
 
-export default function Navbar() {
+export default function Navbar({ onOpenCV }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -49,13 +49,29 @@ export default function Navbar() {
               <a
                 href={link.href}
                 className={`navbar__link${activeSection === link.href.slice(1) ? ' navbar__link--active' : ''}`}
+                onClick={(e) => {
+                  if (link.href === '#cv' && onOpenCV) {
+                    // allows smooth scroll and also ensures users can interact
+                  }
+                }}
               >
                 {link.label}
               </a>
             </li>
           ))}
           <li>
-            <a href="mailto:thanhhieu3004@gmail.com" className="navbar__cta">
+            <button
+              type="button"
+              onClick={onOpenCV}
+              className="navbar__cv-btn"
+              title="Open Curriculum Vitae"
+            >
+              <span className="material-icons" style={{ fontSize: '16px' }}>description</span>
+              CV Modal
+            </button>
+          </li>
+          <li>
+            <a href="mailto:thanhhieunguyen3004@gmail.com" className="navbar__cta">
               Hire Me
             </a>
           </li>
@@ -87,6 +103,36 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <button
+              type="button"
+              className="navbar__mobile-link"
+              style={{
+                background: 'rgba(91, 82, 232, 0.1)',
+                color: 'var(--accent)',
+                fontWeight: 600,
+                border: 'none',
+                textAlign: 'left',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                width: '100%',
+                cursor: 'pointer'
+              }}
+              onClick={() => {
+                setMenuOpen(false);
+                if (onOpenCV) onOpenCV();
+              }}
+            >
+              <span className="material-icons" style={{ fontSize: '18px' }}>description</span>
+              View Full CV / Resume
+            </button>
+            <a
+              href="mailto:thanhhieunguyen3004@gmail.com"
+              className="navbar__mobile-cta"
+              onClick={() => setMenuOpen(false)}
+            >
+              Hire Me
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

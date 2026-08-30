@@ -14,7 +14,6 @@ export default function Contact() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // In real app: POST to API
     setSent(true);
     setTimeout(() => setSent(false), 4000);
     setForm({ name: '', email: '', message: '' });
@@ -23,8 +22,8 @@ export default function Contact() {
   return (
     <SectionWrapper
       id="contact"
-      title="Let's Build Together"
-      subtitle="I'm open to new projects, collaborations and opportunities."
+      title="Get In Touch"
+      subtitle="Currently seeking a Java Backend Intern opportunity. Let's connect!"
     >
       <div className="contact__layout" ref={ref}>
         {/* Left info */}
@@ -35,12 +34,11 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="contact__info-heading">
-            Got a project? <br />
-            <span className="contact__info-accent">Let's talk.</span>
+            Let's discuss <br />
+            <span className="contact__info-accent">internship & projects.</span>
           </h2>
           <p className="contact__info-text">
-            Whether you have a big idea, a small fix, or just want to say hi — 
-            my inbox is always open. I'll do my best to get back to you quickly!
+            I am actively seeking a Java Backend Intern opportunity to learn from experienced mentors and contribute to real-world software products. Reach out via email, phone, or message!
           </p>
 
           <div className="contact__items">
@@ -51,20 +49,30 @@ export default function Contact() {
                 <div className="contact__item-value">{personalInfo.email}</div>
               </div>
             </a>
+
+            <a href={`tel:${personalInfo.phoneRaw}`} className="contact__item">
+              <div className="contact__item-icon"><span className="material-icons">call</span></div>
+              <div>
+                <div className="contact__item-label">Phone</div>
+                <div className="contact__item-value">{personalInfo.phone}</div>
+              </div>
+            </a>
+
             <a href={personalInfo.github} target="_blank" rel="noreferrer" className="contact__item">
               <div className="contact__item-icon"><span className="material-icons">code</span></div>
               <div>
                 <div className="contact__item-label">GitHub</div>
-                <div className="contact__item-value">github.com/thanhhieu3004</div>
+                <div className="contact__item-value">{personalInfo.githubDisplay}</div>
               </div>
             </a>
-            <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="contact__item">
-              <div className="contact__item-icon"><span className="material-icons">link</span></div>
+
+            <div className="contact__item contact__item--static">
+              <div className="contact__item-icon"><span className="material-icons">place</span></div>
               <div>
-                <div className="contact__item-label">LinkedIn</div>
-                <div className="contact__item-value">linkedin.com/in/thanhhieu3004</div>
+                <div className="contact__item-label">Location</div>
+                <div className="contact__item-value">{personalInfo.location}</div>
               </div>
-            </a>
+            </div>
           </div>
         </motion.div>
 
@@ -82,7 +90,7 @@ export default function Contact() {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Nguyen Van A"
+              placeholder="e.g. Recruiter / Engineering Manager"
               className="contact__input"
               required
             />
@@ -94,7 +102,7 @@ export default function Contact() {
               type="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="you@example.com"
+              placeholder="company@example.com"
               className="contact__input"
               required
             />
@@ -105,7 +113,7 @@ export default function Contact() {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Tell me about your project..."
+              placeholder="Write a message or opportunity details..."
               className="contact__input contact__textarea"
               rows={5}
               required
@@ -113,7 +121,7 @@ export default function Contact() {
           </div>
           <button type="submit" className="btn btn--primary contact__submit">
             {sent
-              ? <><span className="material-icons btn__icon">check_circle</span> Sent!</>
+              ? <><span className="material-icons btn__icon">check_circle</span> Message Sent!</>
               : <><span className="material-icons btn__icon">send</span> Send Message</>
             }
           </button>
@@ -123,7 +131,7 @@ export default function Contact() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              ✅ Thanks! I'll get back to you soon.
+              ✅ Thank you! I will reply as soon as possible.
             </motion.p>
           )}
         </motion.form>

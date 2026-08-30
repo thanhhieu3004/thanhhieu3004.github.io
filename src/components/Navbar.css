@@ -76,6 +76,28 @@
   width: 100%;
 }
 
+.navbar__cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  background: rgba(91, 82, 232, 0.1);
+  border: 1.5px solid rgba(91, 82, 232, 0.25);
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.navbar__cv-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 15px rgba(91, 82, 232, 0.3);
+}
+
 .navbar__cta {
   font-size: 0.85rem;
   font-weight: 600;
@@ -90,6 +112,17 @@
   background: var(--accent);
   color: #fff;
   box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.navbar__mobile-cta {
+  padding: 1rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(91, 82, 232, 0.05);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s;
+  display: block;
 }
 
 .navbar__burger {

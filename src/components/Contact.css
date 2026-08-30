@@ -44,18 +44,22 @@
   transition: all 0.25s;
 }
 
-.contact__item:hover {
+.contact__item:hover:not(.contact__item--static) {
   border-color: var(--accent);
   background: var(--bg-card-hover);
   transform: translateX(6px);
+}
+
+.contact__item--static {
+  cursor: default;
 }
 
 .contact__item-icon {
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background: rgba(108, 99, 255, 0.1);
-  border: 1px solid rgba(108, 99, 255, 0.2);
+  background: rgba(91, 82, 232, 0.1);
+  border: 1px solid rgba(91, 82, 232, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,7 +134,7 @@
 
 .contact__input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(91, 82, 232, 0.15);
 }
 
 .contact__textarea {
@@ -147,7 +151,8 @@
 .contact__success {
   text-align: center;
   font-size: 0.9rem;
-  color: #4ade80;
+  color: #10b981;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {

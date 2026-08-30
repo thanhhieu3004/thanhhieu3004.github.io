@@ -25,7 +25,7 @@ function ScrambleText({ text }) {
         .join('');
       if (frame >= text.length) clearInterval(interval);
       frame += 1;
-    }, 40);
+    }, 35);
 
     return () => clearInterval(interval);
   }, [text]);
@@ -33,7 +33,7 @@ function ScrambleText({ text }) {
   return <span ref={ref}>{text}</span>;
 }
 
-export default function Hero() {
+export default function Hero({ onOpenCV }) {
   return (
     <section id="hero" className="hero">
       {/* Animated background grid */}
@@ -52,7 +52,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
           >
             <span className="hero__tag-dot" />
-            Available for opportunities
+            Seeking Java Backend Intern Opportunity
           </motion.div>
 
           <motion.h1
@@ -92,13 +92,21 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
           >
-            <a href="#projects" className="btn btn--primary">
-              <span className="material-icons btn__icon">work</span>
-              View My Work
+            <button
+              type="button"
+              onClick={onOpenCV}
+              className="btn btn--primary"
+            >
+              <span className="material-icons btn__icon">description</span>
+              View CV / Resume
+            </button>
+            <a href="#projects" className="btn btn--outline">
+              <span className="material-icons btn__icon">layers</span>
+              Projects
             </a>
             <a href={`mailto:${personalInfo.email}`} className="btn btn--outline">
               <span className="material-icons btn__icon">mail</span>
-              Get In Touch
+              Contact
             </a>
           </motion.div>
 
@@ -112,9 +120,13 @@ export default function Hero() {
               <span className="material-icons">code</span>
               GitHub
             </a>
-            <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="hero__social">
-              <span className="material-icons">link</span>
-              LinkedIn
+            <a href={`mailto:${personalInfo.email}`} className="hero__social">
+              <span className="material-icons">email</span>
+              Email
+            </a>
+            <a href={`tel:${personalInfo.phoneRaw}`} className="hero__social">
+              <span className="material-icons">call</span>
+              {personalInfo.phone}
             </a>
           </motion.div>
         </div>
@@ -131,15 +143,15 @@ export default function Hero() {
                 src={`https://avatars.githubusercontent.com/thanhhieu3004?v=4`}
                 alt={personalInfo.name}
                 className="hero__avatar-img"
-                onError={e => { e.target.src = 'https://ui-avatars.com/api/?name=Thanh+Hieu&background=6c63ff&color=fff&size=256&bold=true'; }}
+                onError={e => { e.target.src = 'https://ui-avatars.com/api/?name=Thanh+Hieu&background=5b52e8&color=fff&size=256&bold=true'; }}
               />
             </div>
           </div>
           <div className="hero__avatar-badge">
-            <span className="material-icons hero__avatar-badge-icon">terminal</span>
+            <span className="material-icons hero__avatar-badge-icon">dns</span>
             <div>
-              <div className="hero__avatar-badge-title">Full-Stack Dev</div>
-              <div className="hero__avatar-badge-sub">React · Node · Cloud</div>
+              <div className="hero__avatar-badge-title">Java Backend</div>
+              <div className="hero__avatar-badge-sub">Spring Boot · Kafka · Cloud</div>
             </div>
           </div>
         </motion.div>

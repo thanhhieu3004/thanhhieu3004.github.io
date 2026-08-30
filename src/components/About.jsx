@@ -2,21 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import SectionWrapper from './SectionWrapper';
-import { personalInfo } from '../data/portfolio';
+import { personalInfo, education } from '../data/portfolio';
 import './About.css';
 
-const stats = [
-  { value: '3+', label: 'Years Coding' },
-  { value: '20+', label: 'Projects Built' },
-  { value: '10+', label: 'Happy Clients' },
-  { value: '5+', label: 'Technologies' },
+const highlights = [
+  { value: '4th Year', label: 'Saigon University' },
+  { value: 'Java 17+', label: 'Core Foundation' },
+  { value: '8 Services', label: 'Microservices Architected' },
+  { value: 'Spring Ecosystem', label: 'Boot, Cloud, Batch, JPA' },
 ];
 
-export default function About() {
+export default function About({ onOpenCV }) {
   const [ref, inView] = useInView({ threshold: 0.15, triggerOnce: true });
 
   return (
-    <SectionWrapper id="about" title="About Me">
+    <SectionWrapper id="about" title="Professional Summary">
       <div className="about__layout">
         {/* Left: text */}
         <motion.div
@@ -27,35 +27,40 @@ export default function About() {
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
           <h2 className="about__heading">
-            Passionate developer, <br />
-            <span className="about__heading-accent">problem solver</span> at heart.
+            Aspiring <span className="about__heading-accent">Java Backend Developer</span> with passion for system architecture.
           </h2>
-          <p className="about__para">{personalInfo.description}</p>
+          <p className="about__para">{personalInfo.summary}</p>
           <p className="about__para">
-            I enjoy taking complex problems and turning them into simple, beautiful solutions. 
-            When I'm not coding, you'll find me exploring the latest trends in web tech, 
-            contributing to open source, or enjoying a good cup of coffee ☕.
+            Having chosen Java as my foundational language, I focus on building resilient server-side architectures, designing decoupled event-driven workflows with Apache Kafka, and optimizing database queries and caching strategies.
           </p>
           <div className="about__chips">
-            {['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Docker', 'AWS'].map(t => (
+            {['Java 17+', 'Spring Boot', 'Spring Cloud', 'Apache Kafka', 'Keycloak', 'PostgreSQL', 'Redis', 'Docker'].map(t => (
               <span key={t} className="about__chip">
                 <span className="about__chip-dot" />{t}
               </span>
             ))}
           </div>
           <div className="about__cta-row">
-            <a href="mailto:thanhhieu3004@gmail.com" className="btn btn--primary">
+            <button
+              type="button"
+              className="btn btn--primary"
+              onClick={onOpenCV}
+            >
+              <span className="material-icons btn__icon">description</span>
+              View Full CV
+            </button>
+            <a href="#contact" className="btn btn--outline">
               <span className="material-icons btn__icon">mail</span>
-              Let's Talk
+              Contact Me
             </a>
-            <a href="/CV.pdf" download className="btn btn--outline">
-              <span className="material-icons btn__icon">download</span>
-              Download CV
+            <a href="#projects" className="btn btn--outline">
+              <span className="material-icons btn__icon">terminal</span>
+              Projects
             </a>
           </div>
         </motion.div>
 
-        {/* Right: stats */}
+        {/* Right: stats & quick highlights from CV */}
         <motion.div
           className="about__stats"
           initial={{ opacity: 0, x: 40 }}
@@ -63,7 +68,7 @@ export default function About() {
           transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
         >
           <div className="about__stats-grid">
-            {stats.map((s, i) => (
+            {highlights.map((s, i) => (
               <motion.div
                 key={s.label}
                 className="about__stat-card"
@@ -76,18 +81,28 @@ export default function About() {
               </motion.div>
             ))}
           </div>
+
           <div className="about__card">
-            <span className="material-icons about__card-icon">lightbulb</span>
+            <span className="material-icons about__card-icon">school</span>
             <div>
-              <div className="about__card-title">Currently Exploring</div>
-              <div className="about__card-text">AI-powered web features, edge computing & WebAssembly</div>
+              <div className="about__card-title">Education & Standing</div>
+              <div className="about__card-text">{education.institution} · {education.degree}</div>
             </div>
           </div>
+
+          <div className="about__card">
+            <span className="material-icons about__card-icon">work_outline</span>
+            <div>
+              <div className="about__card-title">Seeking Role</div>
+              <div className="about__card-text">Java Backend Intern — Ready to contribute to real-world products</div>
+            </div>
+          </div>
+
           <div className="about__card">
             <span className="material-icons about__card-icon">place</span>
             <div>
-              <div className="about__card-title">Based In</div>
-              <div className="about__card-text">Vietnam 🇻🇳 · Open to remote worldwide</div>
+              <div className="about__card-title">Location</div>
+              <div className="about__card-text">{personalInfo.location}</div>
             </div>
           </div>
         </motion.div>
