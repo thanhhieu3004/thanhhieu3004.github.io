@@ -30,7 +30,7 @@ export default function Skills() {
     <SectionWrapper
       id="skills"
       title="Technical Skills"
-      subtitle="Core foundational language in Java (17+), modern Spring ecosystem, and distributed systems tooling."
+      subtitle="Comprehensive technical skill set spanning backend frameworks, databases, cloud DevOps, and AI workflows."
     >
       <div ref={ref}>
         {skillCategories.map((cat, ci) => (

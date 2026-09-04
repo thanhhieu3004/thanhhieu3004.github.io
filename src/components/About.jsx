@@ -27,14 +27,14 @@ export default function About({ onOpenCV }) {
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
           <h2 className="about__heading">
-            Aspiring <span className="about__heading-accent">Java Backend Developer</span> with passion for system architecture.
+            Aspiring <span className="about__heading-accent">Software Engineer</span> with passion for system architecture.
           </h2>
           <p className="about__para">{personalInfo.summary}</p>
           <p className="about__para">
-            Having chosen Java as my foundational language, I focus on building resilient server-side architectures, designing decoupled event-driven workflows with Apache Kafka, and optimizing database queries and caching strategies.
+            Having chosen Java as my foundational language, I focus on server-side logic, scalable distributed architectures with Spring Boot and Spring Cloud, decoupled event-driven workflows with Apache Kafka, and automated data pipelines.
           </p>
           <div className="about__chips">
-            {['Java 17+', 'Spring Boot', 'Spring Cloud', 'Apache Kafka', 'Keycloak', 'PostgreSQL', 'Redis', 'Docker'].map(t => (
+            {['Java (17+)', 'Spring Boot', 'Spring Cloud', 'NestJS', 'Apache Kafka', 'PostgreSQL', 'Redis', 'Docker'].map(t => (
               <span key={t} className="about__chip">
                 <span className="about__chip-dot" />{t}
               </span>
@@ -94,7 +94,7 @@ export default function About({ onOpenCV }) {
             <span className="material-icons about__card-icon">work_outline</span>
             <div>
               <div className="about__card-title">Seeking Role</div>
-              <div className="about__card-text">Java Backend Intern — Ready to contribute to real-world products</div>
+              <div className="about__card-text">Software Engineer Intern — Ready to learn from mentors and contribute</div>
             </div>
           </div>
 

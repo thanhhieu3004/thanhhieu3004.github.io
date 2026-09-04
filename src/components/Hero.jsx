@@ -52,7 +52,7 @@ export default function Hero({ onOpenCV }) {
             transition={{ delay: 0.2 }}
           >
             <span className="hero__tag-dot" />
-            Seeking Java Backend Intern Opportunity
+            Seeking Software Engineer Intern Opportunity
           </motion.div>
 
           <motion.h1
@@ -148,10 +148,10 @@ export default function Hero({ onOpenCV }) {
             </div>
           </div>
           <div className="hero__avatar-badge">
-            <span className="material-icons hero__avatar-badge-icon">dns</span>
+            <span className="material-icons hero__avatar-badge-icon">code</span>
             <div>
-              <div className="hero__avatar-badge-title">Java Backend</div>
-              <div className="hero__avatar-badge-sub">Spring Boot · Kafka · Cloud</div>
+              <div className="hero__avatar-badge-title">Software Engineer</div>
+              <div className="hero__avatar-badge-sub">Java · Spring Boot · Microservices</div>
             </div>
           </div>
         </motion.div>
