@@ -1,10 +1,10 @@
 export const personalInfo = {
   name: "NGUYEN THANH HIEU",
   fullName: "Nguyễn Thanh Hiếu",
-  title: "Java Backend Intern",
-  subtitle: "4th-year Software Engineering student aspiring to build a career as a Java Backend Developer with expertise in Spring Boot, Microservices & Event-Driven systems.",
+  title: "Software Engineer Intern",
+  subtitle: "4th-year Software Engineering student aspiring to build a long-term career as a Software Engineer with expertise in Java, Spring Boot, Microservices & Data Pipelines.",
   summary:
-    "4th-year Software Engineering student aspiring to build a long-term career as a Backend Developer, having chosen Java as my core foundational language. Passionate about server-side logic, system architecture, and solving complex problems with clean, maintainable code. A fast and proactive learner seeking a Java Backend Intern opportunity to learn from experienced mentors and contribute to real-world software products.",
+    "4th-year Software Engineering student aspiring to build a long-term career as a Software Engineer, having chosen Java as my core foundational language. Passionate about server-side logic, system architecture, and solving complex problems with clean, maintainable code. A fast and proactive learner seeking a Software Engineer Intern opportunity to learn from experienced mentors and contribute to real-world software products.",
   email: "thanhhieunguyen3004@gmail.com",
   phone: "(+84) 907 767 961",
   phoneRaw: "+84907767961",
@@ -28,63 +28,57 @@ export const navLinks = [
 
 export const skillCategories = [
   {
-    title: "Languages",
+    title: "Languages & Frameworks",
     skills: [
       { name: "Java (17+)", icon: "code", desc: "Core language, OOP, Multithreading" },
-      { name: "SQL", icon: "table_chart", desc: "Complex queries, schema design" },
-      { name: "JavaScript (ES6+)", icon: "javascript", desc: "Modern syntax, async flow" },
-      { name: "HTML5 / CSS3", icon: "html", desc: "Semantic markup & styling" },
-    ],
-  },
-  {
-    title: "Frameworks & Architecture",
-    skills: [
+      { name: "TypeScript", icon: "code", desc: "Type-safe modern development" },
+      { name: "JavaScript", icon: "javascript", desc: "Modern syntax, asynchronous flow" },
+      { name: "SQL", icon: "table_chart", desc: "Relational queries & optimization" },
       { name: "Spring Boot", icon: "layers", desc: "RESTful APIs & Backend services" },
       { name: "Spring Cloud", icon: "cloud_sync", desc: "Gateway, Eureka, OpenFeign" },
+      { name: "NestJS", icon: "hub", desc: "Enterprise TypeScript architecture" },
       { name: "Spring Data JPA", icon: "storage", desc: "Hibernate ORM & Persistence" },
       { name: "Spring Batch", icon: "dynamic_feed", desc: "Chunk-based ETL processing" },
-      { name: "RESTful APIs", icon: "api", desc: "Clean & standardized contracts" },
-      { name: "Microservices", icon: "hub", desc: "Distributed domain architecture" },
-      { name: "ReactJS", icon: "web", desc: "Admin dashboards & Client UI" },
+      { name: "ReactJS", icon: "web", desc: "Client UI & Admin dashboards" },
     ],
   },
   {
-    title: "Databases & Caching",
+    title: "Databases & DevOps",
     skills: [
       { name: "PostgreSQL", icon: "dns", desc: "Database-per-service pattern" },
       { name: "MySQL", icon: "storage", desc: "High-volume data persistence" },
       { name: "Redis", icon: "bolt", desc: "In-memory query acceleration" },
-      { name: "Elasticsearch", icon: "search", desc: "Centralized log indexing" },
-    ],
-  },
-  {
-    title: "Messaging & Security",
-    skills: [
       { name: "Apache Kafka", icon: "sync_alt", desc: "Decoupled async event streaming" },
-      { name: "Keycloak", icon: "vpn_key", desc: "IAM & Centralized authentication" },
-      { name: "Spring Security", icon: "security", desc: "OAuth2 / JWT & RBAC" },
-    ],
-  },
-  {
-    title: "DevOps & Tools",
-    skills: [
-      { name: "Docker", icon: "deployed_code", desc: "Containerized application packaging" },
-      { name: "Docker Compose", icon: "grid_view", desc: "Multi-container local deployment" },
+      { name: "Docker", icon: "deployed_code", desc: "Containerized app packaging" },
+      { name: "Docker Compose", icon: "grid_view", desc: "Multi-service local orchestration" },
       { name: "Git", icon: "merge", desc: "Version control & collaboration" },
-      { name: "Nginx", icon: "alt_route", desc: "Reverse proxy & routing" },
-      { name: "Filebeat", icon: "receipt_long", desc: "Real-time log harvesting" },
-      { name: "GCP (Google Cloud)", icon: "cloud", desc: "Cloud VPS infrastructure" },
-      { name: "Vercel", icon: "flight_takeoff", desc: "Frontend continuous deployment" },
-      { name: "Postman", icon: "send", desc: "API testing & documentation" },
+      { name: "GCP", icon: "cloud", desc: "Cloud VPS infrastructure" },
     ],
   },
   {
-    title: "AI Tools & Prompting",
+    title: "AI Tools",
     skills: [
       { name: "Cursor", icon: "terminal", desc: "AI-powered IDE workflows" },
       { name: "ChatGPT", icon: "smart_toy", desc: "Architecture & logic prompting" },
       { name: "GitHub Copilot", icon: "psychology", desc: "Contextual code assistance" },
       { name: "Prompt Engineering", icon: "auto_awesome", desc: "Precise requirement translation" },
+    ],
+  },
+  {
+    title: "Soft Skills",
+    skills: [
+      { name: "Problem-Solving", icon: "lightbulb", desc: "Analytical mindset & debugging" },
+      { name: "Teamwork & Collaboration", icon: "groups", desc: "Cross-functional team synergy" },
+      { name: "Effective Communication", icon: "forum", desc: "Clear technical and interpersonal discussion" },
+      { name: "Fast-Learner", icon: "trending_up", desc: "Quick adaptation to new technologies" },
+      { name: "Time Management", icon: "schedule", desc: "Prioritization & delivery focus" },
+    ],
+  },
+  {
+    title: "Languages",
+    skills: [
+      { name: "English", icon: "translate", desc: "Technical reading & writing, conversational speaking" },
+      { name: "Vietnamese", icon: "flag", desc: "Native proficiency" },
     ],
   },
 ];
@@ -97,10 +91,9 @@ export const projects = [
     subtitle: "Microservices Architecture with 8 Domain Services",
     icon: "restaurant_menu",
     techStack: [
-      "Spring Boot",
+      "Spring Boot (RESTful APIs)",
       "Spring Cloud",
       "Kafka",
-      "Keycloak",
       "Redis",
       "PostgreSQL",
       "ReactJS",
@@ -108,34 +101,40 @@ export const projects = [
       "Vercel",
     ],
     links: [
-      { label: "Backend", url: "https://github.com/thanhhieu3004", icon: "code" },
-      { label: "Frontend", url: "https://github.com/thanhhieu3004", icon: "web" },
+      { label: "Backend Code", url: "https://github.com/thanhhieu3004", icon: "code" },
+      { label: "Frontend Code", url: "https://github.com/thanhhieu3004", icon: "web" },
       { label: "Live Demo", url: "https://github.com/thanhhieu3004", icon: "open_in_new" },
     ],
     highlights: [
       {
-        tech: "Spring Cloud (Gateway, Eureka, OpenFeign)",
-        detail: "Acted as the single entry point for API routing, dynamic service discovery, and synchronous inter-service communication across 8 domain services.",
+        tech: "RESTful API & Spring Cloud",
+        detail:
+          "Designed scalable RESTful APIs with Global Exception Handling and DTO validations; leveraged Spring Cloud (Gateway, Eureka, OpenFeign) for dynamic service discovery and inter-service communication.",
       },
       {
         tech: "Apache Kafka",
-        detail: "Centralized event bus for asynchronous communication, handling decoupled workflows including order placement, kitchen cooking status, and payment events.",
+        detail:
+          "Centralized event bus for asynchronous communication, handling decoupled workflows including order placement, kitchen cooking status, and payment events.",
       },
       {
-        tech: "Keycloak & Spring Security (OAuth2)",
-        detail: "Managed IAM to validate JWT tokens at Gateway and enforce Role-Based Access Control (RBAC: Admin, Waiter, Kitchen) via custom headers.",
+        tech: "Spring Security (JWT & OAuth2)",
+        detail:
+          "Configured centralized authentication to validate JWT tokens at API Gateway and enforced Role-Based Access Control (RBAC: Admin, Waiter, Kitchen) via custom headers.",
       },
       {
         tech: "PostgreSQL & Redis",
-        detail: "Designed Database-per-Service pattern with 8 isolated PostgreSQL instances; utilized Redis caching to accelerate menu and combo query response times.",
+        detail:
+          "Designed Database-per-Service pattern with 8 isolated PostgreSQL instances; utilized Redis caching to accelerate menu and combo query response times.",
       },
       {
         tech: "Frontend UI & Deployment (ReactJS, Vercel)",
-        detail: "Developed the Admin Dashboard and client UI using ReactJS (AI-assisted scaffolding) and deployed frontend seamlessly on Vercel.",
+        detail:
+          "Developed the Admin Dashboard and client UI using ReactJS (AI-assisted scaffolding) and deployed frontend seamlessly on Vercel.",
       },
       {
         tech: "Containerization (Docker Compose)",
-        detail: "Containerized all microservices, databases, Keycloak, and Kafka broker for instant 1-command reproducible local deployment.",
+        detail:
+          "Containerized all microservices, databases, and Kafka broker for instant 1-command reproducible local deployment.",
       },
     ],
   },
@@ -143,14 +142,13 @@ export const projects = [
     id: "honda-parts-pipeline",
     title: "Honda Parts Pipeline & Automated Alerting System",
     type: "Personal Project",
-    subtitle: "High-Volume ETL Pipeline & Centralized Log Alerting",
+    subtitle: "High-Volume ETL Pipeline & Automated Telegram Alerting",
     icon: "precision_manufacturing",
     techStack: [
-      "Spring Boot",
+      "Spring Boot (RESTful APIs)",
       "Spring Batch",
       "MySQL",
-      "Elasticsearch",
-      "Filebeat",
+      "Telegram Bot API",
       "Nginx",
       "Docker",
       "GCP",
@@ -161,19 +159,23 @@ export const projects = [
     highlights: [
       {
         tech: "Spring Boot & Spring Batch",
-        detail: "Developed multithreaded web scrapers and chunk-based ETL processing jobs to extract, transform, and efficiently persist high-volume parts data into MySQL.",
+        detail:
+          "Developed multithreaded web scrapers and chunk-based ETL processing jobs to extract, transform, and efficiently persist high-volume parts data into MySQL.",
       },
       {
-        tech: "Filebeat & Elasticsearch",
-        detail: "Configured Filebeat agents to harvest application log files in real-time and stream them to Elasticsearch for centralized storage and rapid index querying.",
+        tech: "RESTful CRUD APIs",
+        detail:
+          "Designed robust RESTful endpoints with pagination, filtering, and sorting to perform CRUD operations on parts inventory and trigger manual/automated pipeline jobs.",
       },
       {
-        tech: "Elasticsearch Java Client & Telegram API",
-        detail: "Built an automated background scheduler to scan error logs and instantly dispatch alert notifications with error context to Telegram channels.",
+        tech: "Automated Alerting (Telegram Bot API)",
+        detail:
+          "Built automated scheduled tasks to monitor ETL pipeline health and instantly dispatch error logs with contextual details to Telegram channels.",
       },
       {
         tech: "Docker, Nginx & GCP VPS",
-        detail: "Containerized backend services with Docker Compose and deployed the entire architecture onto a Google Cloud Platform VPS with Nginx as a reverse proxy.",
+        detail:
+          "Containerized backend services with Docker Compose and deployed the entire architecture onto a Google Cloud Platform VPS with Nginx as a reverse proxy.",
       },
     ],
   },
@@ -185,11 +187,24 @@ export const education = {
   degree: "Engineer in Software Engineering (4.5-Year Program)",
   period: "2023 – Early 2028 (Expected)",
   status: "4th-Year Software Engineering Student",
-  summary: "Pursuing a comprehensive Software Engineering degree with core specialization in server-side Java architectures, distributed backend services, and database engineering.",
+  summary:
+    "Pursuing a comprehensive Software Engineering degree with core specialization in server-side logic, system architecture, distributed microservices, and automated data pipelines.",
   modules: [
-    { title: "Core Specialization", desc: "Java (17+), OOP Principles, Multithreading, Clean Architecture" },
-    { title: "Distributed Systems", desc: "Microservices, Spring Cloud (Gateway/Eureka), Event Streaming with Kafka" },
-    { title: "Persistence & Data", desc: "Relational DBs (PostgreSQL, MySQL), Redis In-Memory Caching, Elasticsearch" },
-    { title: "DevOps & Infrastructure", desc: "Docker Compose, Linux/GCP VPS deployment, Nginx reverse proxy" },
+    {
+      title: "Core Foundations",
+      desc: "Java (17+), TypeScript, JavaScript, SQL, OOP Principles, Clean Architecture",
+    },
+    {
+      title: "Frameworks & Backend",
+      desc: "Spring Boot, Spring Cloud (Gateway, Eureka, OpenFeign), NestJS, Spring Data JPA, Spring Batch",
+    },
+    {
+      title: "Databases & Caching",
+      desc: "PostgreSQL, MySQL, Redis in-memory acceleration, Database-per-service pattern",
+    },
+    {
+      title: "DevOps & Cloud",
+      desc: "Apache Kafka, Docker, Docker Compose, Git, GCP VPS, Nginx reverse proxy",
+    },
   ],
 };

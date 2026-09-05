@@ -23,7 +23,7 @@ export default function Contact() {
     <SectionWrapper
       id="contact"
       title="Get In Touch"
-      subtitle="Currently seeking a Java Backend Intern opportunity. Let's connect!"
+      subtitle="Currently seeking a Software Engineer Intern opportunity. Let's connect!"
     >
       <div className="contact__layout" ref={ref}>
         {/* Left info */}
@@ -38,7 +38,7 @@ export default function Contact() {
             <span className="contact__info-accent">internship & projects.</span>
           </h2>
           <p className="contact__info-text">
-            I am actively seeking a Java Backend Intern opportunity to learn from experienced mentors and contribute to real-world software products. Reach out via email, phone, or message!
+            I am actively seeking a Software Engineer Intern opportunity to learn from experienced mentors and contribute to real-world software products. Reach out via email, phone, or message!
           </p>
 
           <div className="contact__items">
